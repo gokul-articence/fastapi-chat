@@ -15,13 +15,14 @@ ENV \
     POETRY_NO_INTERACTION=1 \
     POETRY_VERSION=1.5.1
 
-EXPOSE 8000
+EXPOSE 8001
 
 WORKDIR /opt/chat
 
 COPY poetry.lock pyproject.toml ./
 RUN pip install "poetry==$POETRY_VERSION"
 RUN poetry export --with test,lint --output requirements.txt
-RUN pip install --no-deps -r requirements.txt
+RUN pip install -r requirements.txt
+RUN pip install uvicorn redis sentry-sdk[fastapi,asyncpg]
 
 COPY . .

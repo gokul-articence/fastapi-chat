@@ -21,8 +21,8 @@ class GlobalSettings(BaseSettings):
 
     DB_USER: str = "postgres"
     DB_PASSWORD: str = "postgres"
-    DB_HOST: str = "chat-postgres"
-    DB_PORT: str = "5432"
+    DB_HOST: str = "localhost"
+    DB_PORT: str = "5442"
     DB_NAME: str = "postgres"
     DB_SCHEMA: str = "chat"
     # specify single database url
@@ -41,7 +41,7 @@ class GlobalSettings(BaseSettings):
 
     # redis for caching
     REDIS_CACHE_ENABLED: bool = True
-    REDIS_HOST: str = "chat-redis"
+    REDIS_HOST: str = "localhost"
     REDIS_PORT: str | int = 6379
     REDIS_PASSWORD: str | None = None
     REDIS_CACHE_EXPIRATION_SECONDS: int = 60 * 30

@@ -1,22 +1,20 @@
-version: "3.8"
-
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: chat-backend
-    environment:
-      - ENVIRONMENT=development
-    ports:
-      - "8001:8001"
-    volumes:
-      - .:/opt/chat
-    depends_on:
-      - db
-    networks:
-      - chat-net
-    command: uvicorn src.main:app --host=0.0.0.0 --port=8001 --reload
+  # web:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: chat-backend
+  #   environment:
+  #     - ENVIRONMENT=development
+  #   ports:
+  #     - "8001:8001"
+  #   volumes:
+  #     - .:/opt/chat
+  #   depends_on:
+  #     - db
+  #   networks:
+  #     - chat-net
+  #   command: uvicorn src.main:app --host=0.0.0.0 --port=8001 --reload
 
   db:
     image: postgres:15-alpine
@@ -59,7 +57,6 @@ services:
 
 networks:
   chat-net:
-    external: true
 
 volumes:
   postgres_data:
