@@ -33,7 +33,7 @@ Admin: https://fastapi-chat-2bfa6dd112d2.herokuapp.com/admin/ (login: `bekzod`, 
   - uploading photos to cloud 
   - updating non-essential info
 - Message status confirmation: sending, sent and read
-- Read status tracking with one field per user per chat (last read message) instead of tracking  individual message read status
+- Read status tracking with one field per user per chat(last read message) instead of tracking individual message read status
 - User status tracking: online, inactive and offline
 - User `is typing` tracking
 - Google Oauth2 authentication:
@@ -51,3 +51,5 @@ Admin: https://fastapi-chat-2bfa6dd112d2.herokuapp.com/admin/ (login: `bekzod`, 
 - Run tests: `make test`
   
 <img width="864" alt="Screenshot 2024-02-18 at 18 37 11" src="https://github.com/notarious2/fastapi-chat/assets/104051317/27df9a18-5131-4e39-a80e-103f8b9ba5e8">
+
+fastapi
